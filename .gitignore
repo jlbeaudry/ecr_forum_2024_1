@@ -13,8 +13,7 @@
 *.csl
 *.bib
 internal_notes.md
-/processed data
-/raw data
+/*data
 
 # Example code in package build process
 *-Ex.R
