@@ -25,7 +25,10 @@ df <- here::here("data", "ecr_forum_raw_data.csv") %>%
 meta <- read_csv(here::here("data", "ecr_forum_metadata.csv"), lazy = FALSE) %>%
       filter(old_variable != "NA", old_variable != "exclude") # remove the instruction variables
 
+# combine all item text labels into the short column
 
+meta <- meta %>%
+  mutate(item_text_short = ifelse(is.na(item_text_short), item_text, item_text_short))
 
 ##### RECODE VARIABLES #####
 
