@@ -1,5 +1,5 @@
 ---
-title: "DVCR Forum with ECRs (September 2023)"
+title: "DVCR Forum with ECRs (March 2024)"
 subtitle: "Summary of Responses to RDS Survey: Complete Report"
 #author: "Jen Beaudry"
 #date: "12/07/2024"
@@ -18,7 +18,7 @@ header-includes:
   - \pagestyle{fancy} # sets the footer on page 2 and beyond
   - \fancyhf{} # clears existing header & footer
   - \renewcommand{\headrulewidth}{0pt} # removes the line from the header
-  - \fancyfoot[L]{Jen Beaudry} # my name in footer
+#  - \fancyfoot[L]{Jen Beaudry} # my name in footer
   - \fancyfoot[R]{\thepage} # page number in foooter
 ---
 
@@ -61,7 +61,7 @@ source(here("..", "functions", "ratings_summary.R"))
 
 df <- read_csv(here::here("data", "ecr_forum_processed.csv"), lazy = FALSE)
 
-attendees <- "69"
+attendees <- as.integer(69)
 
 ```
 
@@ -71,7 +71,8 @@ they want us to communicate opportunities to them, and one was an open-ended
 question giving them a chance to tell us anything else they wanted us to know. 
 
 Of the `r attendees` early career researchers who attended this session, `r nrow(df)` 
-completed the survey. 
+completed the survey. The responses might not be reflective of the attitudes of 
+all attendees because of the low response rate (`r round((nrow(df)/attendees*100),2)`%).   
 
 \captionsetup[table]{labelformat=empty}
 
@@ -372,4 +373,4 @@ knitr::kable (
 
 ```
 
-
+If you have any questions, please contact Dr Jen Beaudry, Manager, Researcher Training, Development and Communication in Research Development and Support. 
